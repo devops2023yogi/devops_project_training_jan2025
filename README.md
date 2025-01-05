@@ -213,13 +213,15 @@ istioctl  dashboard kiali
 
 
 
+Stress Loading:
+
+Get service by the command:
+
+kubectl get svc  -n istio-system
+
+while :
+do
+curl -s -o /dev/null -w %{http_code} curl -s -o /dev/null -w %{http_code} http://a71325ac8c7b0411badebf8659eab63e-409172770.ap-south-1.elb.amazonaws.com/productpage
+done
 
 
-
-
-
-
-
-
-
-)
